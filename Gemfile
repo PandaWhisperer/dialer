@@ -35,6 +35,9 @@ gem 'jbuilder', '~> 2.5'
 # Use devise for authentication
 gem 'devise'
 
+# Creates fake user data
+gem 'faker'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
