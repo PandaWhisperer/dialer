@@ -1,0 +1,19 @@
+<h1>Listing Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone Number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.phone %></td>
+        <td><%= button_to 'Call' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
