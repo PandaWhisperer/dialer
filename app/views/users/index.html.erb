@@ -12,7 +12,7 @@
       <tr>
         <td><%= user.name %></td>
         <td><%= user.phone %></td>
-        <td><%= button_to 'Call' %></td>
+        <td><%= button_to 'Call', call_user_path(user) %></td>
       </tr>
     <% end %>
   </tbody>
