@@ -9,8 +9,6 @@ class CallsController < ApplicationController
   def create
     @user = User.find(params[:id])
     @call = Call.create(from_user: current_user, to_user: @user)
-
-    redirect_to users_path, notice: 'Call in progress. Please wait...'
   end
 
   # POST /calls/:id
