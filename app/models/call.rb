@@ -14,7 +14,7 @@ class Call < ApplicationRecord
     # Create an outoing phone call to the recruiter's number
     # Once connected, Twilio will access `call_url` to retrieve the call script
     twilio_client.api.account.calls.create(
-      from: outgoing_phone_number, to: from_number, url: call_url, method: 'GET'
+      from: outgoing_phone_number, to: from_number, url: call_url
     )
   end
 

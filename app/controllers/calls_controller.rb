@@ -13,11 +13,11 @@ class CallsController < ApplicationController
     redirect_to users_path, notice: 'Call in progress. Please wait...'
   end
 
-  # GET /calls/:id
+  # POST /calls/:id
   #
   # Called by Twilio to retrieve the script for an ongoing call
   #
-  def show
+  def connect
     @call = Call.find(params[:id])
 
     if params[:Digits]

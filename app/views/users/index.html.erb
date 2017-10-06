@@ -11,7 +11,7 @@
     <% @users.each do |user| %>
       <tr>
         <td><%= user.name %></td>
-        <td><%= button_to 'Call', call_user_path(user) %></td>
+        <td><%= button_to 'Call', call_user_path(user), remote: true, method: 'POST' %></td>
       </tr>
     <% end %>
   </tbody>
