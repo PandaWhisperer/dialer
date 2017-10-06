@@ -47,6 +47,9 @@ gem 'phone'
 # Figaro for managing environment variables
 gem 'figaro'
 
+# Use Webmock for testing API interactions
+gem 'webmock'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

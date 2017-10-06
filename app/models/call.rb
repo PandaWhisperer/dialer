@@ -6,15 +6,17 @@ class Call < ApplicationRecord
   after_create :connect_call
 
   def connect_call
-    # Compute full URL for call script
-    call_url = Rails.application.routes.url_helpers.call_url(self,
-      host: ActionMailer::Base.default_url_options[:host]
-    )
-
     # Create an outoing phone call to the recruiter's number
     # Once connected, Twilio will access `call_url` to retrieve the call script
     twilio_client.api.account.calls.create(
-      from: outgoing_phone_number, to: from_number, url: call_url
+      from: outgoing_phone_number, to: from_number, url: url
+    )
+  end
+
+  def url
+    # Compute full URL for call script
+    Rails.application.routes.url_helpers.call_url(self,
+      host: ActionMailer::Base.default_url_options[:host]
     )
   end
 
