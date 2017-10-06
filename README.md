@@ -15,3 +15,9 @@ You'll need a Twilio API key and secret, as well as a phone number to use for ou
 ## Running
 
 Use `bundle exec rails server` to run a server, and `bundle exec rake spec` to run tests.
+
+## IMPORTANT NOTES
+
+The seeds file will generate a bunch of random users with random numbers. Please don't just click and call those! Either add a new user with your own phone number of modify one of the seeds.
+
+Also, there is currently no user authentication, so the app will simply assume that the first user is logged in. This user will receive a call that is then connected to the target user. **Make sure that first user has a phone number YOU own.**
