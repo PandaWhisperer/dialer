@@ -52,7 +52,7 @@ RSpec.describe "Calls", type: :request do
       end
 
       it "connects to the other party" do
-        expect(response.body).to match(/Dial/)
+        expect(response.body).to match(/Dial.*#{@call.to_number}/)
       end
     end
   end

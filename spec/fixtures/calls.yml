@@ -3,3 +3,5 @@
 one:
   from_user: earnie
   to_user: bert
+  from_number: +12135551234
+  to_number: +12135556789
