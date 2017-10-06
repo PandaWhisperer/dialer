@@ -31,7 +31,7 @@ Rails.application.configure do
 
   # Need a default host
   config.action_mailer.default_url_options = {
-    host: 'www.test.com'
+    host: 'www.example.com'
   }
 
   # Tell Action Mailer not to deliver emails to the real world.
