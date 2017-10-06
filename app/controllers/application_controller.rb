@@ -10,8 +10,6 @@ class ApplicationController < ActionController::Base
   private
 
   def set_mailer_host
-    puts "AC: Action Mailer settings: #{ActionMailer::Base.default_url_options}"
-    puts "AC: Setting mailer host to #{request.host_with_port}"
     ActionMailer::Base.default_url_options = { :host => request.host_with_port }
   end
 end
