@@ -4,9 +4,9 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :users, only: :call do
-    post 'call', on: :member
-  end
-
   resources :calls, only: :show
+
+  resources :users do
+    post 'call', on: :member, to: 'calls#create'
+  end
 end

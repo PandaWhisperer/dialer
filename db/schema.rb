@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170923223557) do
+ActiveRecord::Schema.define(version: 20171006000833) do
 
   create_table "calls", force: :cascade do |t|
     t.integer  "from_user_id"
     t.integer  "to_user_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.string   "from_number"
+    t.string   "to_number"
     t.index ["from_user_id"], name: "index_calls_on_from_user_id"
     t.index ["to_user_id"], name: "index_calls_on_to_user_id"
   end
