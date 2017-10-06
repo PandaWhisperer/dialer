@@ -14,7 +14,7 @@ class Call < ApplicationRecord
     puts "M: Call URL: #{call_url}"
 
     twilio_client.api.account.calls.create(
-      from: '+14807197876', to: from_user.phone, url: call_url
+      from: '+14807197876', to: from_user.phone, url: call_url, method: 'GET'
     )
   end
 
